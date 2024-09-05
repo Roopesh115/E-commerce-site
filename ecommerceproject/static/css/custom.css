@@ -1,0 +1,96 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+.nav-item {
+    letter-spacing:.2em;
+    font-size :14px;
+    text-transform:uppercase;
+
+    }
+.dropdown-item{
+    letter-spacing:.2em;
+    font-size :14px;
+    text-transform:uppercase;
+    }
+.my_footer{
+    background-color:#f8f9fa;
+
+    }
+.my_footer p{
+    padding-top:20px;
+    font-size:14px;
+    }
+
+/* Custom CSS for product in category page */
+.container {
+    max-width: 1200px; /* Adjust max width of container */
+}
+
+.card {
+    border: none; /* Light gray solid border */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+.card-title {
+    color: #343a40; /* Darker title color */
+}
+
+.card-text {
+    font-size: 1rem; /* Standardize price font size */
+}
+
+img {
+    object-fit: cover; /* Ensure images cover the space */
+    height: 200px; /* Set a consistent height for product images */
+}
+
+h1.display-4 {
+    font-weight: 700; /* Make the headings bold */
+    color: #007bff; /* Primary color for headings */
+}
+
+/* Custom CSS for products page */
+.container {
+    max-width: 900px; /* Restrict the max width */
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">"; /* Custom separator for breadcrumb */
+}
+
+.display-5 {
+    font-weight: 600;
+    color: #343a40; /* Dark color for product name */
+}
+
+.text-muted {
+    font-size: 1.5rem;
+    color: #6c757d; /* Slightly larger and muted color for price */
+}
+
+.text-danger {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Add some spacing */
+.container > .row {
+    margin-top: 30px;
+}
+

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    We have a variety of products
+{% endblock %}
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block content %}
+    <div class="container my-1 ">
+        <p >You have searched for <b>"{{ query }}"</b></p>
+    </div>
+    <div class="row mt-5">
+        {% for product in products %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <a href="{{ product.get_url }}">
+                    <img src="{{ product.image.url }}" alt="{{product.name}}" class="card-img-top img-fluid">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text text-muted">{{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="container my-1">
+            <div class="text-center p-5 bg-light rounded shadow-sm">
+                <h1 class="display-4 text-danger">No Products Found</h1>
+                <p class="lead text-muted">No products matched your search query. Please try again or explore our <a href="/" class="text-success">homepage</a>.</p>
+                <a href="{% url 'shopapp:AllProductCat' %}" class="btn btn-primary mt-3">Go to Homepage</a>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+{% endblock %}
